@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="desain detail resep.css">
+    <title>Recipe Detail - Pecel</title>
+    </head>
+    <style>
+        body {
+            background-color: #f0f8ff; /* Warna latar belakang halaman */
+            font-family: Arial, sans-serif; /* Mengatur font */
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: #ffebcd; /* Warna latar belakang kontainer */
+            border-radius: 8px; /* Sudut membulat */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan untuk efek kedalaman */
+            padding: 20px;
+            max-width: 600px; /* Lebar maksimum kontainer */
+            margin: auto; /* Mengatur kontainer agar berada di tengah */
+        }
+        .container:hover {
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus {
+            border-color: #5cb85c;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #5cb85c;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+        #result {
+            margin-top: 20px;
+        }
+        .recipe-image {
+            max-width: 100%;
+            height: auto;
+        }
+        .favorite-btn {
+            background-color: #ffcc00;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 10px;
+        }
+    </style>
+<body>
+    <header>
+        <nav>
+            <a href="UTS (2).html"></a>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Pecel</h1>
+        </header>
+        <main>
+            <h1><img class="recipe-image" src="C:\Users\HP\OneDrive\Desktop\Pemrogaman Web\pecel-60d169f437f4b95a326098e2.jpg"style="width:300px;height:200px"alt="Pecel" ></h1>
+            
+            <section class="Bahan-bahan:">
+                <h2>Bahan-bahan:</h2>
+                <ul>
+                    <li>100 gram kangkung</li>
+                    <li>100 gram bayam</li>
+                    <li>100 gram daun singkong</li>
+                    <li>100 gram kacang panjang, potong 3-4 cm</li>
+                    <li>100 gram tauge, seduh</li>
+                    <li>100 gram kol, iris tipis</li>
+                    <li>1 buah mentimun, iris sesuai selera</li>
+                    <li>150 gram kacang tanah, goreng hingga kecokelatan</li>
+                    <li>2-3 siung bawang putih</li>
+                    <li>3-5 buah cabai merah (tambahkan cabai rawit sesuai selera pedas)</li>
+                    <li>2 cm kencur</li>
+                    <li>3 lembar daun jeruk, buang tulangnya</li>
+                    <li>1 sdm gula merah, serut</li>
+                    <li>1 sdt garam</li>
+                    <li>1-2 sdm air asam jawa atau perasan jeruk limau</li>
+                    <li>Air hangat secukupnya untuk mengencerkan bumbu</li>
+                </ul>
+            </section>
+
+            <section class="instructions">
+                <h2>Cara Membuat:</h2>
+                <ol>
+                    <li>Cuci bersih semua sayuran, lalu rebus atau kukus secara terpisah hingga matang tetapi tetap renyah.</li>
+                    <li>Tiriskan sayuran yang telah direbus, lalu susun di atas piring saji.</li>
+                    <li>Haluskan kacang tanah yang sudah digoreng bersama bawang putih, cabai merah, cabai rawit (jika suka pedas), kencur, dan daun jeruk hingga benar-benar halus.</li>
+                    <li>Tambahkan gula merah dan garam, kemudian haluskan lagi hingga tercampur rata.</li>
+                    <li>Larutkan dengan air asam jawa atau jeruk limau, dan tambahkan air hangat sedikit demi sedikit sambil diaduk hingga mencapai kekentalan yang diinginkan.</li>
+                    <li>Siramkan bumbu kacang di atas sayuran yang telah disusun, atau sajikan bumbu kacang secara terpisah di mangkuk.</li>
+                    <li>Pecel siap dinikmati dengan tambahan lontong atau nasi, dan pelengkap seperti tempe goreng atau kerupuk jika suka.</li>
+                </ol>
+            </section>
+        </main>
+    </div>    
+</body>
+</html>

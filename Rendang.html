@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="desain detail resep.css">
+    <title>Recipe Detail - Rendang</title>
+    </head>
+    <style>
+        body {
+            background-color: #f0f8ff; /* Warna latar belakang halaman */
+            font-family: Arial, sans-serif; /* Mengatur font */
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: #ffebcd; /* Warna latar belakang kontainer */
+            border-radius: 8px; /* Sudut membulat */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan untuk efek kedalaman */
+            padding: 20px;
+            max-width: 600px; /* Lebar maksimum kontainer */
+            margin: auto; /* Mengatur kontainer agar berada di tengah */
+        }
+        .container:hover {
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus {
+            border-color: #5cb85c;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #5cb85c;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+        #result {
+            margin-top: 20px;
+        }
+        .recipe-image {
+            max-width: 100%;
+            height: auto;
+        }
+        .favorite-btn {
+            background-color: #ffcc00;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 10px;
+        }
+    </style>
+<body>
+    <header>
+        <nav>
+            <a href="UTS (2).html"></a>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Rendang</h1>
+        </header>
+        <main>
+            <h1><img class="recipe-image" src="C:\Users\HP\OneDrive\Desktop\Pemrogaman Web\641e5ef63dea4.jpg"style="width:300px;height:200px"alt="Rendang" ></h1>
+            
+            <section class="Bahan-bahan:">
+                <h2>Bahan-bahan:</h2>
+                <ul>
+                    <li>500 gr daging</li>
+                    <li>1 batang serai geprek</li>
+                    <li>3 lembar daun jeruk</li>
+                    <li>2 lembar daun salam</li>
+                    <li>1 ruas lengkuas geprek</li>
+                    <li>2 cm kayu manis</li>
+                    <li>1 sdt gula merah</li>
+                    <li>1 sdt kaldu sapi dan garam</li>
+                    <li>1/2 sdt jintan bubuk</li>
+                    <li>1/2 sdt merica bubuk</li>
+                    <li>Jeruk nipis</li>
+                    <li>500 ml santan dari 1/2 kelapa</li>
+                    <li>4 siung bawang putih</li>
+                    <li>6 butir bawang merah</li>
+                    <li>2 butir kemiri</li>
+                    <li>1/2 sdt ketumbar</li>
+                    <li>3 cabai merah besar (buang bijinya)</li>
+                    <li>2 cm kunyit</li>
+                    <li>3 cm jahe</li>
+                </ul>
+            </section>
+
+            <section class="instructions">
+                <h2>Cara Membuat:</h2>
+                <ol>
+                    <li>Haluskan semua bahan bumbu halus dengan blender atau ulekan hingga lembut.</li>
+                    <li>Pastikan semua bahan bumbu halus benar-benar halus agar bumbu meresap sempurna ke dalam daging.</li>
+                    <li>Masukkan santan ke dalam wajan besar, lalu tambahkan bumbu halus, serai, daun jeruk, daun kunyit, daun salam, dan asam kandis.</li>
+                    <li>Aduk santan secara perlahan di atas api sedang hingga mendidih, untuk mencegah santan pecah. Aduk terus hingga bumbu harum dan santan mulai mengental.</li>
+                    <li>Masukkan potongan daging sapi ke dalam wajan, lalu aduk rata dengan bumbu dan santan.</li>
+                    <li>Masak dengan api kecil sambil terus diaduk sesekali agar bumbu meresap dan daging matang merata. Proses ini memakan waktu cukup lama, sekitar 3-4 jam, hingga daging empuk dan bumbu mengental serta berminyak.</li>
+                    <li>Biarkan rendang terus dimasak hingga kuah menyusut dan bumbu benar-benar meresap ke dalam daging. Aduk terus agar tidak gosong.</li>
+                    <li>Setelah daging berwarna cokelat gelap dan bumbu berminyak serta mengering, rendang siap disajikan.</li>
+                </ol>
+            </section>
+        </main>
+    </div>    
+</body>
+</html>

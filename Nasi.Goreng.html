@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="desain detail resep.css">
+    <title>Recipe Detail - Nasi Goreng</title>
+    </head>
+    <style>
+        body {
+            background-color: #f0f8ff; /* Warna latar belakang halaman */
+            font-family: Arial, sans-serif; /* Mengatur font */
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: #ffebcd; /* Warna latar belakang kontainer */
+            border-radius: 8px; /* Sudut membulat */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan untuk efek kedalaman */
+            padding: 20px;
+            max-width: 600px; /* Lebar maksimum kontainer */
+            margin: auto; /* Mengatur kontainer agar berada di tengah */
+        }
+        .container:hover {
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus {
+            border-color: #5cb85c;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #5cb85c;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+        #result {
+            margin-top: 20px;
+        }
+        .recipe-image {
+            max-width: 100%;
+            height: auto;
+        }
+        .favorite-btn {
+            background-color: #ffcc00;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 10px;
+        }
+    </style>
+<body>
+    <header>
+        <nav>
+            <a href="UTS (2).html"></a>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Nasi Goreng</h1>
+        </header>
+        <main>
+            <h1><img class="recipe-image" src="C:\Users\HP\OneDrive\Desktop\Pemrogaman Web\B300026-Cover-resep-nasi-goreng-scaled.jpg"style="width:300px;height:200px"alt="Nasi Goreng" ></h1>
+            
+            <section class="Bahan-bahan:">
+                <h2>Bahan-bahan:</h2>
+                <ul>
+                    <li>2 piring nasi putih (sebaiknya nasi dingin atau nasi sisa semalam)</li>
+                    <li>2 siung bawang putih, cincang halus</li>
+                    <li>3 siung bawang merah, cincang halus</li>
+                    <li>1 butir telur</li>
+                    <li>1 sdm kecap manis</li>
+                    <li>1 sdm kecap asin (opsional, untuk menambah rasa gurih)</li>
+                    <li>Garam, lada, dan sedikit gula (secukupnya)</li>
+                    <li>Minyak goreng atau margarin secukupnya untuk menumis</li>
+                    <li>1 batang daun bawang, iris tipis</li>
+                    <li>Sayuran seperti wortel, kacang polong, atau jagung pipil</li>
+                    <li>2 buah cabai merah atau cabai rawit (jika ingin pedas), iris tipis</li>
+                    <li>Bawang goreng untuk taburan</li>
+                    <li>Acar atau mentimun sebagai pelengkap</li>
+                </ul>
+            </section>
+
+            <section class="instructions">
+                <h2>Cara Membuat:</h2>
+                <ol>
+                    <li>Cincang halus bawang putih dan bawang merah. Siapkan bahan tambahan seperti daun bawang, cabai, dan sayuran jika ingin digunakan.</li>
+                    <li>Panaskan minyak atau margarin dalam wajan dengan api sedang.</li>
+                    <li>Tumis bawang putih dan bawang merah hingga harum dan sedikit kecokelatan.</li>
+                    <li>Pecahkan telur ke dalam wajan, aduk hingga tercampur rata dengan bumbu, dan orak-arik hingga telur matang.</li>
+                    <li>Masukkan nasi putih ke dalam wajan. Aduk-aduk hingga tercampur rata dengan telur dan bumbu.</li>
+                    <li>Tambahkan kecap manis, kecap asin (jika digunakan), garam, lada, dan gula. Aduk kembali hingga bumbu meresap merata ke dalam nasi.</li>
+                    <li>Masukkan daun bawang, cabai, dan sayuran sesuai selera. Aduk rata dan masak sebentar hingga semua bahan matang.</li>
+                    <li>Sajikan nasi goreng di atas piring, tambahkan taburan bawang goreng di atasnya.</li>
+                </ol>
+            </section>
+        </main>
+    </div>    
+</body>
+</html>

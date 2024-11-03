@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cari Resep</title>
+    <style>
+        body {
+            background-color: #f0f8ff; /* Warna latar belakang halaman */
+            font-family: Arial, sans-serif; /* Mengatur font */
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #ffebcd; /* Warna latar belakang kontainer */
+            border-radius: 8px; /* Sudut membulat */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan untuk efek kedalaman */
+            padding: 20px;
+            max-width: 600px; /* Lebar maksimum kontainer */
+            margin: auto; /* Mengatur kontainer agar berada di tengah */
+        }
+
+        .container:hover {
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus {
+            border-color: #5cb85c;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #5cb85c;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            background: #4cae4c;
+            transform: scale(1.05);
+        }
+
+        #result {
+            margin-top: 20px;
+        }
+
+        .recipe-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .recipe-item {
+            border: 1px solid #ccc;
+            margin: 10px 0;
+            padding: 10px;
+            transition: transform 0.2s;
+        }
+        .recipe-item:hover {
+            transform: scale(1.02);
+        }
+        .recipe-image {
+            max-width: 100%;
+            height: auto;
+        }
+        .favorite-btn {
+            background-color: #ffcc00;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 10px;
+        }
+        .hidden {
+    display: none;
+}
+
+#notification {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+.content {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+    </style>    
+</head>
+<body>
+    <div class="container">
+        <h1>Cari Resep</h1>
+        <section class="search-bar">
+            <input type="text" id="searchInput" onkeyup="searchRecipes()" placeholder="Search for recipes...">
+        </section>
+        <div>
+            <section class="recipe-list">
+                <h1>Recipe List</h1>
+                <div class="recipe-card" data-title="Pecel">
+                    <h3>Pecel</h3>
+                    <img class="recipe-image" src="C:\Users\HP\OneDrive\Desktop\Pemrogaman Web\pecel-60d169f437f4b95a326098e2.jpg" style="width:350px;height:250px" alt="Pecel">
+                    <p>Pecel adalah hidangan khas Indonesia yang terdiri dari sayuran rebus dengan siraman bumbu kacang pedas-gurih, sering dinikmati dengan nasi atau lontong.</p>
+                    <a href="pecel.html">
+                        <button onclick="showRecipe('Pecel')">Lihat Resep</button>
+                    </a>
+                </div>
+                <div class="recipe-card" data-title="Sate Ayam">
+                    <h3>Sate Ayam</h3>
+                    <img class="recipe-image" src="C:\Users\HP\OneDrive\Desktop\Pemrogaman Web\Resep-Sate-Ayam-Madura.jpg" style="width:350px;height:250px" alt="Sate Ayam">
+                    <p>Sate ayam adalah hidangan khas Indonesia berupa potongan daging ayam yang ditusuk, dibakar, dan disajikan dengan saus kacang atau kecap, menghasilkan cita rasa yang gurih dan lezat.</p>
+                    <a href="Sate.Ayam.html">
+                        <button onclick="GoToPage('Sate Ayam')">Lihat Resep</button>
+                    </a>
+                    </div>
+                <div class="recipe-card" data-title="Nasi Goreng">
+                    <h3>Nasi Goreng</h3>
+                    <img class="recipe-image" src="C:\Users\HP\OneDrive\Desktop\Pemrogaman Web\B300026-Cover-resep-nasi-goreng-scaled.jpg" style="width:350px;height:250px" alt="Nasi Goreng">
+                    <p> Nasi goreng adalah hidangan khas Indonesia berupa nasi yang ditumis dengan bumbu-bumbu sederhana dan kecap, menghasilkan cita rasa gurih, sedikit manis, dan nikmat.</p>
+                    <a href="Nasi.Goreng.html">
+                        <button onclick="GoToPage('Nasi Goreng')">Lihat Resep</button>
+                    </a>
+                    </div>
+                <div class="recipe-card" data-title="Rendang">
+                    <h3>Rendang</h3>
+                    <img class="recipe-image" src="C:\Users\HP\OneDrive\Desktop\Pemrogaman Web\641e5ef63dea4.jpg" style="width:350px;height:250px" alt="Rendang">
+                    <p>TRendang adalah masakan khas Indonesia yang berbahan dasar daging sapi dimasak perlahan dalam santan dan rempah-rempah, menghasilkan cita rasa kaya, pedas, dan gurih dengan tekstur daging yang empuk.</p>
+                    <a href="Rendang.html">
+                        <button onclick="GoToPage('Rendang')">Lihat Resep</button>
+                    </a>
+                    </div>
+                 <div class="recipe-card" data-title="Soto Ayam">
+                    <h3>Soto Ayam</h3>
+                    <img class="recipe-image" src="C:\Users\HP\OneDrive\Desktop\Pemrogaman Web\media_1617781998_0.jpeg" style="width:350px;height:250px" alt="Soto Ayam">
+                    <p>Soto ayam adalah sup khas Indonesia yang berisi potongan daging ayam, bihun, telur, dan sayuran, disajikan dengan kuah kuning gurih beraroma rempah.</p>
+                    <a href="Soto.Ayam.html">
+                        <button onclick="GoToPage('biryani')">Lihat Resep</button>
+                    </a>
+                    </div>
+                <div class="recipe-card" data-title="Gado-gado">
+                    <h3>Gado-gado</h3>
+                    <img class="recipe-image" src="C:\Users\HP\OneDrive\Desktop\Pemrogaman Web\1093597743.jpg" style="width:350px;height:250px" alt="Gado-gado">
+                    <p>Gado-gado adalah salad sayuran khas Indonesia yang disajikan dengan bumbu kacang kental, dilengkapi dengan tahu, tempe, telur rebus, dan kerupuk, menciptakan kombinasi rasa yang segar dan gurih.</p>
+                    <a href="Gado-gado.html">
+                        <button onclick="GoToPage('Gado-gado')">Lihat Resep</button>
+                    </a>
+                    </div>
+                <div class="recipe-card" data-title="Bubur Ayam">
+                    <h3>Bubur Ayam</h3>
+                    <img class="recipe-image" src="C:\Users\HP\OneDrive\Desktop\Pemrogaman Web\shutterstock_1927030937.jpg" style="width:350px;height:250px" alt="Bubur Ayam">
+                    <p>Bubur ayam adalah hidangan nasi yang dimasak dengan air hingga lembut, disajikan dengan potongan daging ayam, irisan daun bawang, dan bawang goreng, serta sering dilengkapi dengan kecap dan sambal untuk rasa yang lebih nikmat.</p>
+                    <a href="Bubur.Ayam.html">
+                        <button onclick="GoToPage('Bubur Ayam')">Lihat Resep</button>
+                    </a>
+                    </div>
+                <div class="recipe-card" data-title="Tahu Campur">
+                    <h3>Tahu Campur</h3>
+                    <img class="recipe-image" src="C:\Users\HP\OneDrive\Desktop\Pemrogaman Web\tahu campur.jpg" style="width:350px;height:250px" alt="Tahu Campur">
+                    <p>Tahu campur adalah hidangan khas Indonesia yang terdiri dari tahu, sayuran, dan mie, disajikan dengan kuah kaldu kental yang dibumbui dengan rempah, menciptakan kombinasi rasa gurih dan segar.</p>
+                    <a href="Tahu.Campur.html">
+                        <button onclick="GoToPage('Poutine')">Lihat Resep</button>
+                    </a>
+                </div>
+            </section>
+    </main>
+
+    <body>
+        <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="desain_detail_resep.css">
+    <title>Tambahkan Resep</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Tambahkan Resep</h1>
+        <div id="notification" class="hidden">Resep berhasil ditambahkan!</div> <!-- Notification element -->
+        <form id="recipe-form">
+            <input type="text" id="recipe-title" placeholder="Judul Resep" required>
+            
+            <h2>Unggah Gambar Resep:</h2>
+            <input type="file" id="recipe-image" accept="image/*" required>
+            
+            <h2>Deskripsi Resep</h2>
+            <div id="recipe-description">
+                <div class="recipe-description">
+                    <input type="text" placeholder="Deskripsi" required>
+                </div>
+            </div>
+            
+            <h2>Bahan-Bahan:</h2>
+            <div id="ingredients-list">
+                <div class="ingredient-item">
+                    <input type="text" placeholder="Bahan" required>
+                </div>
+            </div>
+            
+            <h2>Cara Membuat:</h2>
+            <div id="recipe-method">
+                <div class="recipe-method">
+                    <input type="text" placeholder="Cara Pembuatan" required>
+                    <button type="button" onclick="removeIngredient(this)">Hapus</button>
+                </div>
+            </div>
+            
+            <button type="submit">Simpan Resep</button>
+        </form>
+    </div>
+    <div id="results"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Integration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<footer>
+    <div class="container">
+        <section class="content">
+            <h1>Social Media</h1>
+            <p>This is our social media</p>
+        </section>
+
+        <section class="social-buttons">
+            <button onclick="shareOnFacebook()">Facebook</button>
+            <button onclick="shareOnTwitter()">Twitter</button>
+            <button onclick="shareOnLinkedIn()">LinkedIn</button>
+            <button onclick="shareOnWhatsApp()">WhatsApp</button>
+        </section>
+    </div>
+</footer>
+    <script>
+        function searchRecipes() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const cards = document.querySelectorAll('.recipe-card');
+
+    cards.forEach(card => {
+        const title = card.getAttribute('data-title').toLowerCase();
+        if (title.includes(input)) {
+            card.style.display = '';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+//bagian tambahkan resep
+// Get references to the DOM elements
+// Get references to the DOM elements
+const recipeForm = document.getElementById('recipe-form');
+const ingredientsList = document.getElementById('ingredients-list');
+const recipeMethod = document.getElementById('recipe-method');
+const recipeTitleInput = document.getElementById('recipe-title');
+const recipeImageInput = document.getElementById('recipe-image');
+const resultsDiv = document.getElementById('results');
+const notification = document.getElementById('notification');
+
+// Function to add a new ingredient input field
+function addIngredient() {
+    const ingredientItem = document.createElement('div');
+    ingredientItem.className = 'ingredient-item';
+    ingredientItem.innerHTML = `
+        <input type="text" placeholder="Bahan" required>
+        <button type="button" onclick="removeIngredient(this)">Hapus</button>
+    `;
+    ingredientsList.appendChild(ingredientItem);
+}
+
+// Function to add a new method input field
+function addMethodStep() {
+    const methodStep = document.createElement('div');
+    methodStep.className = 'recipe-method';
+    methodStep.innerHTML = `
+        <input type="text" placeholder="Cara Pembuatan" required>
+        <button type="button" onclick="removeMethodStep(this)">Hapus</button>
+    `;
+    recipeMethod.appendChild(methodStep);
+}
+
+// Function to remove an ingredient input field
+function removeIngredient(element) {
+    element.parentElement.remove();
+}
+
+// Function to remove a method input field
+function removeMethodStep(element) {
+    element.parentElement.remove();
+}
+
+// Function to display the recipes on the page
+function displayRecipe(title, imageSrc, description, ingredients, methods) {
+    const recipeCard = document.createElement('div');
+    recipeCard.className = 'recipe-card';
+
+    const ingredientsHtml = ingredients.map(ingredient => `<li>${ingredient}</li>`).join('');
+    const methodsHtml = methods.map(method => `<li>${method}</li>`).join('');
+
+    recipeCard.innerHTML = `
+        <h3>${title}</h3>
+        <img src="${imageSrc}" alt="${title}" style="width:100%">
+        <p>${description}</p>
+        <h4>Ingredients:</h4>
+        <ul>${ingredientsHtml}</ul>
+        <h4>Instructions:</h4>
+        <ol>${methodsHtml}</ol>
+    `;
+    resultsDiv.appendChild(recipeCard);
+}
+
+// Function to show notification
+function showNotification(message) {
+    notification.textContent = message;
+    notification.classList.remove('hidden');
+    setTimeout(() => {
+        notification.classList.add('hidden');
+    }, 3000); // Hide notification after 3 seconds
+}
+
+// Event listener to handle form submission
+recipeForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const recipeTitle = recipeTitleInput.value;
+    const recipeImage = recipeImageInput.files[0];
+    const description = document.querySelector('#recipe-description input').value;
+
+    const ingredients = [];
+    document.querySelectorAll('.ingredient-item input').forEach(input => {
+        ingredients.push(input.value);
+    });
+
+    const methods = [];
+    document.querySelectorAll('.recipe-method input').forEach(input => {
+        methods.push(input.value);
+    });
+
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        const imageSrc = e.target.result;
+        displayRecipe(recipeTitle, imageSrc, description, ingredients, methods);
+        showNotification('Resep berhasil ditambahkan!');
+    };
+    reader.readAsDataURL(recipeImage);
+
+    // Reset the form
+    recipeForm.reset();
+});
+
+// Add initial buttons to add ingredients and methods
+const addIngredientButton = document.createElement('button');
+addIngredientButton.type = 'button';
+addIngredientButton.textContent = 'Tambah Bahan';
+addIngredientButton.onclick = addIngredient;
+ingredientsList.appendChild(addIngredientButton);
+
+const addMethodStepButton = document.createElement('button');
+addMethodStepButton.type = 'button';
+addMethodStepButton.textContent = 'Tambah Cara Membuat';
+addMethodStepButton.onclick = addMethodStep;
+recipeMethod.appendChild(addMethodStepButton);
+
+function shareOnFacebook() {
+    const url = encodeURIComponent(window.location.href);
+    const text = encodeURIComponent(document.querySelector('.content p').textContent);
+    const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${text}`;
+    window.open(shareUrl, '_blank');
+}
+
+function shareOnTwitter() {
+    const url = encodeURIComponent(window.location.href);
+    const text = encodeURIComponent(document.querySelector('.content p').textContent);
+    const shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
+    window.open(shareUrl, '_blank');
+}
+
+function shareOnLinkedIn() {
+    const url = encodeURIComponent(window.location.href);
+    const text = encodeURIComponent(document.querySelector('.content p').textContent);
+    const shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+    window.open(shareUrl, '_blank');
+}
+
+function shareOnWhatsApp() {
+    const url = encodeURIComponent(window.location.href);
+    const text = encodeURIComponent(document.querySelector('.content p').textContent);
+    const shareUrl = `https://api.whatsapp.com/send?text=${text} ${url}`;
+    window.open(shareUrl, '_blank');
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="desain detail resep.css">
+    <title>Recipe Detail - Tahu Campur</title>
+    </head>
+    <style>
+        body {
+            background-color: #f0f8ff; /* Warna latar belakang halaman */
+            font-family: Arial, sans-serif; /* Mengatur font */
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: #ffebcd; /* Warna latar belakang kontainer */
+            border-radius: 8px; /* Sudut membulat */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan untuk efek kedalaman */
+            padding: 20px;
+            max-width: 600px; /* Lebar maksimum kontainer */
+            margin: auto; /* Mengatur kontainer agar berada di tengah */
+        }
+        .container:hover {
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus {
+            border-color: #5cb85c;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #5cb85c;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+        #result {
+            margin-top: 20px;
+        }
+        .recipe-image {
+            max-width: 100%;
+            height: auto;
+        }
+        .favorite-btn {
+            background-color: #ffcc00;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 10px;
+        }
+    </style>
+<body>
+    <header>
+        <nav>
+            <a href="UTS (2).html"></a>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Tahu Campur</h1>
+        </header>
+        <main>
+            <h1><img class="recipe-image" src="C:\Users\HP\OneDrive\Desktop\Pemrogaman Web\tahu campur.jpg"style="width:300px;height:200px"alt="Tahu Campur" ></h1>
+            
+            <section class="Bahan-bahan:">
+                <h2>Bahan-bahan:</h2>
+                <ul>
+                    <li>200 gram tahu putih, potong dadu dan goreng</li>
+                    <li>100 gram mi kuning, rebus hingga matang</li>
+                    <li>100 gram tauge, seduh dengan air panas</li>
+                    <li>1 batang daun bawang, iris halus</li>
+                    <li>1 buah timun, potong tipis</li>
+                    <li>1-2 lembar kol, iris halus dan seduh</li>
+                    <li>2 butir telur, rebus dan potong menjadi dua (opsional)</li>
+                    <li>500 ml kaldu ayam atau kaldu sayuran</li>
+                    <li>3 siung bawang putih, haluskan</li>
+                    <li>3 siung bawang merah, haluskan</li>
+                    <li>2 cm jahe, haluskan</li>
+                    <li>1 sdm kecap manis</li>
+                    <li>1 sdm sambal (sesuai selera)</li>
+                    <li>Garam dan merica secukupnya</li>
+                    <li>1 sdm minyak goreng (untuk menumis)</li>
+                </ul>
+            </section>
+
+            <section class="instructions">
+                <h2>Cara Membuat:</h2>
+                <ol>
+                    <li>Panaskan minyak dalam wajan, tumis bawang putih, bawang merah, dan jahe hingga harum.</li>
+                    <li>Tuangkan kaldu ayam ke dalam wajan, lalu tambahkan kecap manis dan sambal. Aduk rata dan biarkan kuah mendidih. Koreksi rasa dengan menambahkan garam dan merica sesuai selera.</li>
+                    <li>Siapkan mangkuk saji, tata mi kuning, tauge, potongan tahu goreng, irisan timun, daun bawang, dan kol di dalamnya.</li>
+                    <li>Jika menggunakan, tambahkan potongan telur rebus di atasnya.</li>
+                    <li>Siramkan kuah panas ke atas campuran bahan utama dalam mangkuk.</li>
+                    <li>Hidangkan tahu campur dengan pelengkap kerupuk atau sambal sesuai selera.</li>
+                </ol>
+            </section>
+        </main>
+    </div>    
+</body>
+</html>

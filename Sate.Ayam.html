@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="desain detail resep.css">
+    <title>Recipe Detail - Sate Ayam</title>
+    </head>
+    <style>
+        body {
+            background-color: #f0f8ff; /* Warna latar belakang halaman */
+            font-family: Arial, sans-serif; /* Mengatur font */
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: #ffebcd; /* Warna latar belakang kontainer */
+            border-radius: 8px; /* Sudut membulat */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan untuk efek kedalaman */
+            padding: 20px;
+            max-width: 600px; /* Lebar maksimum kontainer */
+            margin: auto; /* Mengatur kontainer agar berada di tengah */
+        }
+        .container:hover {
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus {
+            border-color: #5cb85c;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #5cb85c;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+        #result {
+            margin-top: 20px;
+        }
+        .recipe-image {
+            max-width: 100%;
+            height: auto;
+        }
+        .favorite-btn {
+            background-color: #ffcc00;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 10px;
+        }
+    </style>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <a href="UTS (2).html"></a>
+            </ul>
+
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Sate Ayam</h1>
+        </header>
+        <main>
+            <h1><img class="recipe-image" src="C:\Users\HP\OneDrive\Desktop\Pemrogaman Web\Resep-Sate-Ayam-Madura.jpg"style="width:300px;height:200px"alt="Sate Ayam" ></h1>
+            
+            <section class="Bahan-bahan:">
+                <h2>Bahan-bahan:</h2>
+                <ul>
+                    <li>500 gram daging ayam tanpa kulit, potong dadu</li>
+                    <li>20-25 tusuk sate (rendam dalam air selama 30 menit agar tidak mudah terbakar)</li>
+                    <li>200 gram kacang tanah, goreng</li>
+                    <li>3 siung bawang putih</li>
+                    <li>5 buah cabai merah (sesuaikan jumlahnya untuk tingkat kepedasan)</li>
+                    <li>2 sdm gula merah, serut</li>
+                    <li>1 sdt garam</li>
+                    <li>3 lembar daun jeruk, buang tulangnya</li>
+                    <li>1-2 sdm kecap manis</li>
+                    <li>300 ml air matang</li>
+                    <li>3 sdm kecap manis</li>
+                    <li>2 sdm minyak goreng atau margarin</li>
+                </ul>
+            </section>
+
+            <section class="instructions">
+                <h2>Cara Membuat:</h2>
+                <ol>
+                    <li>Haluskan kacang tanah goreng, bawang putih, cabai merah, daun jeruk, gula merah, dan garam. Bisa menggunakan blender atau ulekan hingga halus.</li>
+                    <li>Pindahkan bumbu kacang yang sudah dihaluskan ke panci, tambahkan air matang, dan masak dengan api kecil sambil diaduk hingga mendidih dan mengental.</li>
+                    <li>Tambahkan kecap manis, aduk rata, lalu angkat dan sisihkan.</li>
+                    <li>Tusuk potongan daging ayam dengan tusuk sate yang telah direndam, isi setiap tusuk dengan 4-5 potongan daging ayam.</li>
+                    <li>Campurkan kecap manis dan minyak goreng untuk olesan sate.</li>
+                    <li>Olesi sate dengan campuran kecap dan minyak, lalu bakar di atas bara api (arang atau grill) hingga matang. Balik sate dan olesi kembali dengan campuran kecap selama proses pembakaran agar bumbu meresap dan sate tidak kering.</li>
+                    <li>Bakar sate hingga matang dan sedikit kecokelatan.</li>
+                    <li>Sajikan sate ayam dengan bumbu kacang di atasnya.</li>
+                </ol>
+            </section>
+        </main>
+    </div>    
+</body>
+</html>

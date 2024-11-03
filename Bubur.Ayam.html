@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="desain detail resep.css">
+    <title>Recipe Detail - Bubur Ayam</title>
+    </head>
+    <style>
+        body {
+            background-color: #f0f8ff; /* Warna latar belakang halaman */
+            font-family: Arial, sans-serif; /* Mengatur font */
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: #ffebcd; /* Warna latar belakang kontainer */
+            border-radius: 8px; /* Sudut membulat */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan untuk efek kedalaman */
+            padding: 20px;
+            max-width: 600px; /* Lebar maksimum kontainer */
+            margin: auto; /* Mengatur kontainer agar berada di tengah */
+        }
+        .container:hover {
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus {
+            border-color: #5cb85c;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #5cb85c;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+        #result {
+            margin-top: 20px;
+        }
+        .recipe-image {
+            max-width: 100%;
+            height: auto;
+        }
+        .favorite-btn {
+            background-color: #ffcc00;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 10px;
+        }
+    </style>
+<body>
+    <header>
+        <nav>
+            <a href="UTS (2).html"></a>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Bubur Ayam</h1>
+        </header>
+        <main>
+            <h1><img class="recipe-image" src="C:\Users\HP\OneDrive\Desktop\Pemrogaman Web\shutterstock_1927030937.jpg"style="width:300px;height:200px"alt="Bubur Ayam" ></h1>
+            
+            <section class="Bahan-bahan:">
+                <h2>Bahan-bahan:</h2>
+                <ul>
+                    <li>200 gram beras, cuci bersih</li>
+                    <li>1 liter air (atau lebih, sesuai kekentalan yang diinginkan)</li>
+                    <li>200 gram daging ayam (paha atau dada), rebus dan suwir-suwir</li>
+                    <li>1 sdt garam (atau sesuai selera)</li>
+                    <li>2 batang daun bawang, iris halus</li>
+                    <li>2 butir telur, rebus dan potong menjadi dua</li>
+                    <li>Bawang goreng secukupnya</li>
+                    <li>Kecap manis dan sambal (sesuai selera)</li>
+                    <li>Kerupuk atau emping (opsional)</li>
+                    <li>1 liter air (untuk merebus ayam)</li>
+                    <li>2-3 siung bawang putih, geprek</li>
+                    <li>1 cm jahe, geprek</li>
+                    <li>2 lembar daun salam</li>
+                    <li>Garam secukupnya</li>
+                </ul>
+            </section>
+
+            <section class="instructions">
+                <h2>Cara Membuat:</h2>
+                <ol>
+                    <li>Rebus daging ayam dalam 1 liter air bersama bawang putih, jahe, daun salam, dan garam hingga ayam matang dan empuk. Angkat ayam, tiriskan, dan suwir-suwir. Saring kaldu dan simpan untuk memasak bubur.</li>
+                    <li>Dalam panci, masukkan beras yang sudah dicuci bersih dan kaldu ayam yang telah disaring. Masak dengan api sedang, aduk sesekali agar nasi tidak menggumpal.</li>
+                    <li>Tambahkan garam dan masak hingga bubur mencapai kekentalan yang diinginkan. Jika perlu, tambahkan air sedikit-sedikit.</li>
+                    <li>Siapkan mangkuk, tuang bubur yang sudah matang ke dalamnya.</li>
+                    <li>Tambahkan suwiran daging ayam di atas bubur, irisan daun bawang, dan potongan telur rebus.</li>
+                    <li>Taburi bawang goreng dan sajikan dengan kecap manis serta sambal sesuai selera. Tambahkan kerupuk atau emping sebagai pelengkap jika diinginkan.</li>
+                </ol>
+            </section>
+        </main>
+    </div>    
+</body>
+</html>

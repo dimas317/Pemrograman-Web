@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="desain detail resep.css">
+    <title>Recipe Detail - Soto Ayam</title>
+    </head>
+    <style>
+        body {
+            background-color: #f0f8ff; /* Warna latar belakang halaman */
+            font-family: Arial, sans-serif; /* Mengatur font */
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: #ffebcd; /* Warna latar belakang kontainer */
+            border-radius: 8px; /* Sudut membulat */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan untuk efek kedalaman */
+            padding: 20px;
+            max-width: 600px; /* Lebar maksimum kontainer */
+            margin: auto; /* Mengatur kontainer agar berada di tengah */
+        }
+        .container:hover {
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus {
+            border-color: #5cb85c;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #5cb85c;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+        #result {
+            margin-top: 20px;
+        }
+        .recipe-image {
+            max-width: 100%;
+            height: auto;
+        }
+        .favorite-btn {
+            background-color: #ffcc00;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 10px;
+        }
+    </style>
+<body>
+    <header>
+        <nav>
+            <a href="UTS (2).html"></a>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Soto Ayam</h1>
+        </header>
+        <main>
+            <h1><img class="recipe-image" src="C:\Users\HP\OneDrive\Desktop\Pemrogaman Web\media_1617781998_0.jpeg"style="width:300px;height:200px"alt="Soto Ayam" ></h1>
+            
+            <section class="Bahan-bahan:">
+                <h2>Bahan-bahan:</h2>
+                <ul>
+                    <li>500 gram daging ayam (dada atau paha), bersihkan</li>
+                    <li>2 liter air (untuk kuah)</li>
+                    <li>100 gram bihun, seduh hingga lunak</li>
+                    <li>2 buah kentang, potong dadu dan goreng</li>
+                    <li>2 butir telur rebus, potong menjadi dua</li>
+                    <li>1 batang daun bawang, iris tipis</li>
+                    <li>Tauge secukupnya, seduh hingga layu</li>
+                    <li>Kol secukupnya, iris tipis</li>
+                    <li>5 siung bawang putih</li>
+                    <li>7 butir bawang merah</li>
+                    <li>3 cm kunyit, bakar sebentar</li>
+                    <li>2 cm jahe</li>
+                    <li>2 butir kemiri, sangrai</li>
+                    <li>1 sdt ketumbar bubuk</li>
+                    <li>2 lembar daun salam</li>
+                    <li>2 batang serai, memarkan</li>
+                    <li>3 lembar daun jeruk</li>
+                    <li>2 cm lengkuas, memarkan</li>
+                    <li>Garam, gula, dan merica secukupnya</li>
+                    <li>Minyak untuk menumis</li>
+                    <li>Bawang goreng secukupnya</li>
+                    <li>Daun seledri cincang</li>
+                    <li>Jeruk nipis</li>
+                    <li>Sambal cabai rawit</li>
+                </ul>
+            </section>
+
+            <section class="instructions">
+                <h2>Cara Membuat:</h2>
+                <ol>
+                    <li>Rebus ayam dalam air hingga matang. Angkat ayam dan tiriskan, lalu suwir-suwir daging ayamnya.</li>
+                    <li>Sisihkan air rebusan ayam sebagai kaldu untuk kuah soto.</li>
+                    <li>Haluskan semua bahan bumbu halus (bawang putih, bawang merah, kunyit, jahe, kemiri, dan ketumbar).</li>
+                    <li>Panaskan sedikit minyak, tumis bumbu halus bersama daun salam, serai, daun jeruk, dan lengkuas hingga harum dan matang.</li>
+                    <li>Masukkan bumbu tumis ke dalam kaldu ayam, tambahkan garam, gula, dan merica secukupnya.</li>
+                    <li>Masak kuah soto hingga mendidih dan bumbu meresap. Koreksi rasa.</li>
+                    <li>Siapkan mangkuk, tata bihun, potongan kentang goreng, tauge, kol, dan suwiran ayam di dalamnya.</li>
+                    <li>Tuangkan kuah soto panas ke dalam mangkuk hingga semua bahan terendam.</li>
+                    <li>Tambahkan pelengkap seperti telur rebus, bawang goreng, daun seledri, dan perasan jeruk nipis sesuai selera.</li>
+                    <li>Hidangkan bersama sambal dan kerupuk untuk menambah cita rasa.</li>
+                </ol>
+            </section>
+        </main>
+    </div>    
+</body>
+</html>
